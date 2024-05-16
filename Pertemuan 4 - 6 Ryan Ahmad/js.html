@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Scripted</title>
+</head>
+<body>
+    Jawaban:
+    <h1 id="jawaban">
+        20 dikali 5?
+    </h1>
+    <Button onclick="perkalian(20, 5)">
+        Perlihatkan Jawaban
+    </Button>
+
+    <center>
+        <p>
+           
+            <input type="number" id="x" style="width: 40px; margin-bottom: 4px; border-radius: 7px; margin-left: 15px;">
+            <input type="number" id="y" style="width: 40px; margin-bottom: 10px; border-radius: 7px; margin-left: 35px;">
+            <br>
+            <button onclick="kalkulator()" style="color: chocolate; margin-bottom: 4px;">
+                Perkalian (*)
+            </button>
+
+            <button onclick="pembagian()" style="color: chocolate; margin-left: 38px; margin-bottom: 4px;">
+                Pembagian (/)
+            </button>
+            <br>
+            <button onclick="pertambahan()" style="color: chocolate; ">
+                Penjumlahan (+)
+            </button>
+
+            <button onclick="pengurangan()" style="color: chocolate; ">
+                Pengurangan (-)
+            </button>
+            <h1 id="kalkulator" >
+                Jawabannya
+            </h1>
+
+            
+            
+        </p>
+
+    </center>
+    <script>
+        //buat fungsi
+        function perkalian(x, y){
+            document.getElementById("jawaban").innerHTML = x * y
+        }
+        //buat fungsi namanya calculator
+        function kalkulator(){
+            var x = document.getElementById("x").value
+            var y = document.getElementById("y").value
+            document.getElementById("kalkulator").innerHTML = parseInt(x) * parseInt(y)
+        }
+        
+
+        function pembagian(){
+            var x = document.getElementById("x").value
+            var y = document.getElementById("y").value
+            document.getElementById("kalkulator").innerHTML = parseInt(x) / parseInt(y)
+        }
+        
+
+        function pertambahan(){
+            var x = document.getElementById("x").value
+            var y = document.getElementById("y").value
+            document.getElementById("kalkulator").innerHTML = parseInt(x) + parseInt(y)
+        }
+
+        function pengurangan(){
+            var x = document.getElementById("x").value
+            var y = document.getElementById("y").value
+            document.getElementById("kalkulator").innerHTML = parseInt(x) - parseInt(y)
+        }
+    </script>
+</body>
+</html>
